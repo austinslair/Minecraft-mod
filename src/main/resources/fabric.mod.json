@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "id": "backrooms_level0",
+  "version": "${version}",
+  "name": "Backrooms Level 0",
+  "description": "Adds the Backrooms Level 0 dimension for Fabric 1.20.1 / QuestCraft.",
+  "authors": ["OpenAI"],
+  "license": "MIT",
+  "environment": "*",
+  "entrypoints": { "main": ["com.example.backrooms.BackroomsLevel0Mod"] },
+  "mixins": ["backrooms_level0.client.mixins.json"],
+  "depends": { "fabricloader": ">=0.16.0", "minecraft": "~1.20.1", "java": ">=17", "fabric-api": "*" }
+}
