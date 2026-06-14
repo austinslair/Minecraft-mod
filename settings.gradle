@@ -1,0 +1,2 @@
+pluginManagement { repositories { gradlePluginPortal(); mavenCentral(); maven { url = 'https://maven.fabricmc.net/' } } }
+rootProject.name = 'backrooms-level0'
