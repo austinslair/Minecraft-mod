@@ -10,7 +10,11 @@ Fabric 1.20.1 mod prototype for QuestCraft that adds **Level 0 - The Lobby** as 
 - Uses vanilla Minecraft texture references for custom block models so the repository contains no binary image assets.
 - Adds `THE BACKROOMS` text above the Minecraft logo on the main menu.
 
-## Build
+## Downloadable jar
+
+GitHub Actions builds the installable Fabric jar automatically. Open the **Build downloadable mod jar** workflow run, download the `backrooms-level0-fabric-1.20.1` artifact, unzip it, and place the contained `.jar` file into your Minecraft/QuestCraft `mods` folder.
+
+## Local build
 
 This project targets Minecraft `1.20.1`, Fabric Loader `0.16.x`, Fabric API `0.92.x`, and Java 17.
 
@@ -18,4 +22,4 @@ This project targets Minecraft `1.20.1`, Fabric Loader `0.16.x`, Fabric API `0.9
 gradle build
 ```
 
-The downloadable mod jar is produced under `build/libs/` when dependencies can be resolved.
+The local installable mod jar is produced under `build/libs/`. Do not use `*-sources.jar` or `*-dev.jar`; use the normal `backrooms-level0-<version>.jar`.
