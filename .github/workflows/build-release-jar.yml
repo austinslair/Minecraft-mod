@@ -24,11 +24,17 @@ jobs:
           distribution: temurin
           java-version: '17'
 
-      - name: Set up Gradle 8.10.2
+      - name: Set up Gradle
         uses: gradle/actions/setup-gradle@v4
         with:
-          # Fabric Loom 1.7.4 is not compatible with newer Gradle 8.14+/9.x APIs.
-          gradle-version: '8.10.2'
+          gradle-version: '8.14.3'
+
+      - name: Override Gradle for Fabric Loom 1.7.4
+        run: |
+          curl -L https://services.gradle.org/distributions/gradle-8.10.2-bin.zip -o /tmp/gradle-8.10.2-bin.zip
+          unzip -q /tmp/gradle-8.10.2-bin.zip -d /tmp
+          echo "/tmp/gradle-8.10.2/bin" >> "$GITHUB_PATH"
+          /tmp/gradle-8.10.2/bin/gradle --version
 
       - name: Build remapped Fabric jar
         run: gradle --no-daemon build

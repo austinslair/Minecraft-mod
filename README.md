@@ -24,4 +24,3 @@ gradle build
 
 The local installable mod jar is produced under `build/libs/`. Do not use `*-sources.jar` or `*-dev.jar`; use the normal `backrooms-level0-<version>.jar`.
 
-The CI workflow pins Gradle `8.10.2` because Fabric Loom `1.7.4` is incompatible with newer Gradle `8.14+`/`9.x` problem-reporting APIs.
